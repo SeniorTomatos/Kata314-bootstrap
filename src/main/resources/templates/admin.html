@@ -321,13 +321,13 @@
                                         <input type="text" class="form-control" id="password"
                                                th:field="*{password}" placeholder="Password" required>
                                     </div>
-                                    <span><b>Role</b></span>
-                                    <select class="form-select" multiple th:field="*{roles}"
-                                            aria-label="Default select example" required>
-                                        <option th:each="role : ${AllRoles}" th:value="${role.getId()}"><span
-                                                th:text="${role.getName()}"></span>
-                                        </option>
-                                    </select>
+                                    <div class="mb-3">
+                                        <label for="roles-delete"><b>Roles:</b></label>
+                                        <input type="checkbox" th:each="role : ${AllRoles}"
+                                               th:text="${role.getName()}"
+                                               th:value="${role.getId()}"
+                                               th:field="*{roles}" name="roles" id="roles-delete">
+                                    </div>
                                     <br>
                                     <input type="submit" class="btn btn-success" value="Add new user"/>
                                 </form>
