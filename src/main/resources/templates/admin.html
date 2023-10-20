@@ -322,11 +322,11 @@
                                                th:field="*{password}" placeholder="Password" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="roles-delete"><b>Roles:</b></label>
+                                        <label for="roles-add"><b>Roles:</b></label>
                                         <input type="checkbox" th:each="role : ${AllRoles}"
                                                th:text="${role.getName()}"
                                                th:value="${role.getId()}"
-                                               th:field="*{roles}" name="roles" id="roles-delete">
+                                               th:field="*{roles}" name="roles" id="roles-add">
                                     </div>
                                     <br>
                                     <input type="submit" class="btn btn-success" value="Add new user"/>
